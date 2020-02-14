@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--meta data information-->  
+	<head>
+		<title>Weather - Harriman Bulletin</title>
+		<meta charset="utf-8">
+		<meta name="description" content="Information on the State of Harriman Park in New York">
+		<meta name="author" content="Blair Currey">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="keywords" content="harriman, park, outdoors, weather, reports, hiking, wildlife">
+		
+		<!-- Add css, bootstrap, and fontAwesome stylesheets -->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+	</head>
+
+  <body>
+    
+    <!--Header and Navigation-->
+		<nav class="navbar navbar-container navbar-expand-md fixed-top navbar-dark bg-dark shadow-lg">
+			<!-- Handlebar Nav Template Start -->
+			<script id="navbar-template" type="text/x-handlebars-template">
+			<a class="navbar-brand" href="index.html">
+				{{title}}
+			</a>
+			<button class="navbar-toggler" aria-expanded="false" aria-controls="menu" aria-label="Toggle navigation" type="button" data-target="#menu" data-toggle="collapse">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="menu">
+				<ul class="navbar-nav ml-auto">
+				{{#each upperItem}}
+				<li class="nav-item">
+					<a id={{id}} class="nav-link" href={{path}}>{{name}}</a>
+				</li>
+				{{/each}}
+				{{#each dropDown}}
+				<li class="nav-item dropdown">
+					<a id={{id}} class="nav-link dropdown-toggle" href={{path}} id="navDropdown" aria-haspopup="true" aria-expanded="false" role="button" data-toggle="dropdown">
+						{{name}}
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					{{#each items}}
+						<a id={{id}} class="dropdown-item" href={{path}}>{{name}}</a>
+					{{/each}}
+					</div>
+				</li>
+				{{/each}}
+				</ul>
+				<div class="navbar-text ml-lg">
+				
+				<!-- Subscribe Button -->
+				<button type="button" data-toggle="modal" data-target="#subscribe-modal" class="btn btn-success" id="subscribe-btn">Subscribe</button>
+				
+				<!-- Subscribe Modal -->
+					<div id="subscribe-modal" class="modal" tabindex="-1" role="dialog" aria-labelledby="subscribe-modal">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-text">Subscribe for Updates</h3>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<form>
+										<div class="form-group">
+											<label class="modal-text" for="inputEmail">Send Seasonal Updates To:</label>
+											<input type="email" class="form-control" id="inputEmail" placeholder="email@domain.com">
+										</div>
+									</form>
+								</div>		
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+									<button type="button" class="btn btn-success">Subscribe</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				
+				</div>
+			</div>
+			<!-- Handlebar Nav Template End -->
+			</script>
+		</nav>
+
+		  <!-- Breadcrumb bar -->
+		  <nav aria-label="breadcrumb">
+			<ol class="breadcrumb">
+			  <li class="breadcrumb-item">Home</li>
+			  <li class="breadcrumb-item">Reports</li>
+              <li class="breadcrumb-item active" aria-current="page">Weather</li>
+			</ol>
+		  </nav>
+
+		 <!-- Main Section -->
+		<section>
+			<main class="container" role="main">
+				<div id="weather-article-container">
+					<script id="article-template" type="text/x-handlebars-template">		
+						<div class="mt-5">
+							<h1>{{title}}</h1>
+							<p><small class="text-muted">{{subtitle}}</small></p>
+							<hr>
+						</div>
+							<article class="mt-5">
+								<div class="col-md-12 p-0">
+									{{#if image}}
+									<img class="image-wrapper float-right" src="{{image.path}}" alt="{{image.alt}}">
+									{{/if}}
+									{{#if paragraphs}}
+									{{#each paragraphs}}
+										{{p}}
+										<br>
+										<br>
+									{{/each}}
+									{{/if}}
+								</div>
+							</article>
+						</div>
+					</script>
+				</div>
+
+					<script type="text/x-handlebars-template">
+						{{> article}}
+					</script>
+
+				<div class="mt-5 weather-records-container">
+					<!-- Handlebar Weather Record Template Start -->
+					<script id="weather-records-template" type="text/x-handlebars-template">
+						<h3>Prior Season's Weather Figures</h3>
+						<h5 class="mt-3"><strong>Weather Station: </strong>{{location}}</h1>
+						<table class="table">
+							<caption>Past Season's Weather Figures</caption>
+							<thead>
+								<tr>
+									<th scope="col">Month</th>
+									<th scope="col">Average Temperature</th>
+									<th scope="col">High Temperature</th>
+									<th scope="col">Low Temperature</th>
+									<th scope="col">Total Precipitation</th>
+								</tr>
+							</thead>
+							<tbody>
+								{{#each month}}
+								<tr>
+									<th scope="row">{{month}}</th>
+									<td>{{average}}</td>
+									<td>{{high}}</td>
+									<td>{{low}}</td>
+									<td>{{precipitation}}</td>
+								</tr>
+								{{/each}}
+								</tr>
+							</tbody>
+						</table>
+					</script>
+				</div>
+
+				<script type="text/x-handlebars-template">
+					{{> weatherRecords}}
+				</script>
+
+			</main>			
+		</section>
+
+		<!-- Footer Section -->
+		<footer class="footer bg-dark footer-container mt-5">
+			<!-- handlebar footer template start -->
+			<script id="footer-template" type="text/x-handlebars-template">
+			<div class="bg-primary">
+				<div class="container">
+					<div class="row py-2">
+						<div class="col-sm-6 text-center text-md-left">
+							<!-- Social Media Bar -->
+							<h6 class="my-2 text-white">Follow Us on Social Media!</h6>
+						</div>
+						<div class="col-sm-6 text-center text-md-right">
+							<ul class="list-unstyled list-inline my-2">
+								{{#each socialMedia}}
+								<li class="list-inline-item px-2"><a href="{{url}}"><i class="fa fa-lg fa-{{name}}"></i></a></li>
+								{{/each}}
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Bottom Footer Section -->
+			<div class="container text-center text-md-left">
+				<div class="row">
+					<div class="col-md-4">
+						<h6 class="font-weight-bold text-center text-md-left mt-3">{{info.heading}}</h6>
+						<hr class="bg-primary mb-4 mt-2">
+						<p class="text-center text-md-left">{{info.text}}</p>
+					</div>
+					<div class="col-md-4">
+						<h6 class="font-weight-bold text-center text-md-left mt-3">{{siteNav.heading}}</h6>
+						<hr class="bg-primary mb-4 mt-2">
+						<ul class="list-unstyled text-center text-md-left">
+							{{#each siteNav.path}}
+							<li class="mb-3"><a href={{path}}>{{name}}</a></li>
+							{{/each}}
+						</ul>
+					</div>
+					<div class="col-md-4">
+						<h6 class="font-weight-bold text-center text-md-left mt-3">Find Harriman</h6>
+						<hr class="bg-primary mb-4 mt-2">
+						<p class="text-center text-md-left">{{contact.address}}</p>
+						<p class="text-center text-md-left">{{contact.email}}</p>
+						<p class="text-center text-md-left">{{contact.phone}}</p>
+					</div>
+				</div>
+			</div>
+			<!-- Handlebar Footer Template End -->
+			</script>
+		</footer>
+
+	<!-- Call jquery, popper, and bootstrap -->
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+	<!-- Call Handlebars -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.js"></script>
+	
+	<!-- load handlebars files -->
+	<!-- <script type="handlebars" src="partials/weatherRecords.handlebars"></script> -->
+
+	<!-- Add universal and page specific scripts-->
+	<script src="scripts/script.js"></script>
+	<script src="scripts/weather.js"></script>
+  </body>
+</html>
+  

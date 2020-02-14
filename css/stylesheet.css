@@ -1,0 +1,54 @@
+body {
+    /* padding-top ensures fixed navbar doesn't cover content */
+    padding-top: 60px; 
+    height: 100%;
+}
+
+/* Subscriber button and modal styling */
+#subscribe-btn {
+    padding: 3px 12px 3px 12px;
+}
+
+.modal-backdrop {
+    z-index: 1020;
+}
+
+.modal-text {
+    color: black;
+}
+
+/* Content stlying */
+.content-title {
+    margin-top: 4%;
+    margin-bottom: 2%;
+}
+
+.img-landmark {
+    border-radius: calc(0.25rem - 1px);
+}
+
+    /* unstyle link for cards on homepage */
+.card-link {
+    color: inherit;
+    text-decoration: inherit;
+  }
+
+.footer {
+    background-color: #212529 !important;
+    color: white;
+}
+
+
+/* Mischellaneous element styling */
+hr {
+    border-width: 3px;
+}
+
+i {
+    /* color: rgb(96, 170, 255) */
+    color: #32388f;
+}
+
+i:hover {
+    color: white;
+}

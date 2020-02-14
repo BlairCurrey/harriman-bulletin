@@ -1,0 +1,16 @@
+bootstrap
+social media icons - https://www.kodingmadesimple.com/2015/06/social-media-icons-twitter-bootstrap-navbar.html
+navbar example - https://getbootstrap.com/docs/4.1/examples/navbar-fixed/#
+navbar button - https://bootstrapious.com/p/big-bootstrap-tutorial
+footer - https://mdbootstrap.com/snippets/jquery/temp/1666824?action=prism_export
+wildlife gif - https://giphy.com/gifs/moonlighting-10QBLPa4UZzhcs
+animate gif on hover - https://codeyourdream.com/blog/animating-gif-hover
+to edit weather gif / resize and compress other gifs - https://ezgif.com
+tab index -1 explanation - https://stackoverflow.com/questions/32911355/whats-the-tabindex-1-in-bootstrap-for
+
+customer function to load partial templates - https://javascriptissexy.com/handlebars-js-tutorial-learn-everything-about-handlebars-js-javascript-templating/
+other potential solutinos for loading partials - https://stackoverflow.com/questions/8059914/express-js-hbs-module-register-partials-from-hbs-file
+how to load external templates - https://stackoverflow.com/questions/26643503/handlebars-loading-external-template-files
+
+
+terrain news (land acquisition) - https://www.recordonline.com/news/20200113/major-additions-come-to-local-state-parks

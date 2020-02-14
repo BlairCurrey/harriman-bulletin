@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--meta data information-->  
+	<head>
+		<title>Harriman Bulletin</title>
+		<meta charset="utf-8">
+		<meta name="description" content="Information on the State of Harriman Park in New York">
+		<meta name="author" content="Blair Currey">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="keywords" content="harriman, park, outdoors, weather, reports, hiking, wildlife">
+		
+		<!-- Add css, bootstrap, and fontAwesome stylesheets -->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	</head>
+
+	<body>
+
+		<!--Header and Navigation-->
+		<nav class="navbar navbar-container navbar-expand-md fixed-top navbar-dark bg-dark shadow-lg">
+			<!-- Handlebar Nav Template Start -->
+			<script id="navbar-template" type="text/x-handlebars-template">
+			<a class="navbar-brand" href="index.html">
+				{{title}}
+			</a>
+			<button class="navbar-toggler" aria-expanded="false" aria-controls="menu" aria-label="Toggle navigation" type="button" data-target="#menu" data-toggle="collapse">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="menu">
+				<ul class="navbar-nav ml-auto">
+				{{#each upperItem}}
+				<li class="nav-item">
+					<a id={{id}} class="nav-link" href={{path}}>{{name}}</a>
+				</li>
+				{{/each}}
+				{{#each dropDown}}
+				<li class="nav-item dropdown">
+					<a id={{id}} class="nav-link dropdown-toggle" href={{path}} id="navDropdown" aria-haspopup="true" aria-expanded="false" role="button" data-toggle="dropdown">
+						{{name}}
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					{{#each items}}
+						<a id={{id}} class="dropdown-item" href={{path}}>{{name}}</a>
+					{{/each}}
+					</div>
+				</li>
+				{{/each}}
+				</ul>
+				<div class="navbar-text ml-lg">
+				
+				<!-- Subscribe Button -->
+				<button type="button" data-toggle="modal" data-target="#subscribe-modal" class="btn btn-success" id="subscribe-btn">Subscribe</button>
+				
+				<!-- Subscribe Modal -->
+					<div id="subscribe-modal" class="modal" tabindex="-1" role="dialog" aria-labelledby="subscribe-modal">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-text">Subscribe for Updates</h3>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<form>
+										<div class="form-group">
+											<label class="modal-text" for="inputEmail">Send Seasonal Updates To:</label>
+											<input type="email" class="form-control" id="inputEmail" placeholder="email@domain.com">
+										</div>
+									</form>
+								</div>		
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+									<button type="button" class="btn btn-success">Subscribe</button>
+								</div>
+							</div>
+						</div>
+					</div>				
+				</div>
+			</div>
+			<!-- Handlebar Nav Template End -->
+			</script>
+		</nav>
+
+		  <!-- Breadcrumb bar -->
+		  <nav aria-label="breadcrumb">
+			<ol class="breadcrumb">
+			  <li class="breadcrumb-item active" aria-current="page">Home</li>
+			</ol>
+		  </nav>
+
+		 <!-- Hero Section -->
+		<section>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 align-self-center">
+						<h1>Spring 2020</h1>
+						<h6>Overview of Past Month's Reports:</h6>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					</div>
+					<div class="col-lg-6 align-self-center">
+						<img src="assets/tree-icon.svg" class="mx-auto d-block" alt="tree icon">
+					</div>
+				</div>
+			</div>
+
+
+			<!-- Card Section -->
+			<main class="container" role="main">
+				<!-- Featured Landmark Section -->
+				<div class="card  shadow landmark-container">
+					<!-- Handlebar Landmark Template Start -->
+					<script id="landmark-template" type="text/x-handlebars-template">
+						<h5 class="card-header">Featured Landmark</h5>
+						<div>
+							<div class="row no-gutters">
+								<div class="col-md-6 p-3">
+									<h5 class="card-title">{{name}}</h5>
+									<p class="card-text"><small class="text-muted">Coordinates: {{coordinates}}</small></p>
+									<p class="card-text">{{description}}</p>
+									<a href="#" class="btn btn-primary">{{buttonText}}</a>
+								</div>
+								<div class="col-md-6 p-0">
+									<img src="{{imgPath}}" class="img-fluid float-right img-landmark" alt="a picture of the bradley mine from the inside looking out">
+								</div>
+							</div>
+						</div>
+					<!-- Handlebar Landmark Template End -->
+					</script>
+				</div>
+
+				<div>
+					<!-- Reports Cards Section -->
+					<h2 class="text-center content-title">Reports</h2>
+					<div class="container">
+						<div class="row mb-3">
+							<!-- Weather Card -->
+							<div class="col-md-4">
+								<div class="card shadow" id="weather-card"><a class="card-link" href="weather.html">
+									<div class="card-body text-center">
+										<h5 class="card-title">Weather</h5>
+										<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content</p>
+									</div>
+									<img src="assets/weather-static.jpg" class="card-img-bottom" alt="weather icon">
+								</a></div>
+							</div>
+							<!-- Terrain Card -->
+							<div class="col-md-4">
+								<div class="card shadow" id="terrain-card"><a class="card-link" href="terrain.html">
+									<div class="card-body text-center">
+										<h5 class="card-title">Terrain</h5>
+										<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content</p>
+									</div>
+									<img src="assets/terrain-static.jpg" class="card-img-bottom" alt="terrain icon">
+								</a></div>
+							</div>
+							<!-- Wildlife Card -->
+							<div class="col-md-4">
+								<div class="card shadow" id="wildlife-card"><a class="card-link" href="wildlife.html">
+									<div class="card-body text-center">
+										<h5 class="card-title">Wildlife</h5>
+										<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content</p>
+									</div>
+									<img src="assets/wildlife-static.jpg" class="card-img-bottom" alt="wildlife icon">
+								</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+		</section>
+
+		<!-- Footer Section -->
+		<footer class="footer bg-dark footer-container mt-5">
+			<!-- handlebar footer template start -->
+			<script id="footer-template" type="text/x-handlebars-template">
+			<div class="bg-primary">
+				<div class="container">
+					<div class="row py-2">
+						<div class="col-sm-6 text-center text-md-left">
+							<!-- Social Media Bar -->
+							<h6 class="my-2 text-white">Follow Us on Social Media!</h6>
+						</div>
+						<div class="col-sm-6 text-center text-md-right">
+							<ul class="list-unstyled list-inline my-2">
+								{{#each socialMedia}}
+								<li class="list-inline-item px-2"><a href="{{url}}" alt ="{{alt}}"><i class="fa fa-lg fa-{{name}}"></i></a></li>
+								{{/each}}
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Bottom Footer Section -->
+			<div class="container text-center text-md-left">
+				<div class="row">
+					<div class="col-md-4">
+						<h6 class="font-weight-bold text-center text-md-left mt-3">{{info.heading}}</h6>
+						<hr class="bg-primary mb-4 mt-2">
+						<p class="text-center text-md-left">{{info.text}}</p>
+					</div>
+					<div class="col-md-4">
+						<h6 class="font-weight-bold text-center text-md-left mt-3">{{siteNav.heading}}</h6>
+						<hr class="bg-primary mb-4 mt-2">
+						<ul class="list-unstyled text-center text-md-left">
+							{{#each siteNav.path}}
+							<li class="mb-3"><a href={{path}}>{{name}}</a></li>
+							{{/each}}
+						</ul>
+					</div>
+					<div class="col-md-4">
+						<h6 class="font-weight-bold text-center text-md-left mt-3">Find Harriman</h6>
+						<hr class="bg-primary mb-4 mt-2">
+						<p class="text-center text-md-left">{{contact.address}}</p>
+						<p class="text-center text-md-left">{{contact.email}}</p>
+						<p class="text-center text-md-left">{{contact.phone}}</p>
+					</div>
+				</div>
+			</div>
+			<!-- Handlebar Footer Template End -->
+			</script>
+		</footer>
+
+	<!-- Call jquery, popper, and bootstrap -->
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+	<!-- Call Handlebars -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.js"></script>
+	
+	<!-- Add universal and page specific scripts -->
+	<script src="scripts/index.js"></script>
+	<script src="scripts/script.js"></script>
+	
+  </body>
+</html>
+  
