@@ -1,0 +1,19 @@
+<div class="mt-5">
+    <h1>{{title}}</h1>
+    <p><small class="text-muted">{{subtitle}}</small></p>
+    <hr>
+</div>
+<article class="mt-5">
+    <div class="col-md-12 p-0">
+        {{#if image}}
+        <img class="image-wrapper float-right" src="{{image.path}}" alt="{{image.alt}}">
+        {{/if}}
+        {{#if paragraphs}}
+        {{#each paragraphs}}
+            {{p}}
+            <br>
+            <br>
+        {{/each}}
+        {{/if}}
+    </div>
+</article>

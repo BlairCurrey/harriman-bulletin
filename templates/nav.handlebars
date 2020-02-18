@@ -1,0 +1,57 @@
+<a class="navbar-brand" href="index.html">
+{{title}}
+</a>
+<button class="navbar-toggler" aria-expanded="false" aria-controls="menu" aria-label="Toggle navigation" type="button" data-target="#menu" data-toggle="collapse">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="menu">
+<ul class="navbar-nav ml-auto">
+{{#each upperItem}}
+<li class="nav-item">
+    <a id={{id}} class="nav-link" href={{path}}>{{name}}</a>
+</li>
+{{/each}}
+{{#each dropDown}}
+<li class="nav-item dropdown">
+    <a id={{id}} class="nav-link dropdown-toggle" href={{path}} id="navDropdown" aria-haspopup="true" aria-expanded="false" role="button" data-toggle="dropdown">
+        {{name}}
+    </a>
+    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    {{#each items}}
+        <a id={{id}} class="dropdown-item" href={{path}}>{{name}}</a>
+    {{/each}}
+    </div>
+</li>
+{{/each}}
+</ul>
+<div class="navbar-text ml-lg">
+
+<!-- Subscribe Button -->
+<button type="button" data-toggle="modal" data-target="#subscribe-modal" class="btn btn-success" id="subscribe-btn">Subscribe</button>
+
+<!-- Subscribe Modal -->
+    <div id="subscribe-modal" class="modal" tabindex="-1" role="dialog" aria-labelledby="subscribe-modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-text">Subscribe for Updates</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label class="modal-text" for="inputEmail">Send Seasonal Updates To:</label>
+                            <input type="email" class="form-control" id="inputEmail" placeholder="email@domain.com">
+                        </div>
+                    </form>
+                </div>		
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </div>				
+</div>

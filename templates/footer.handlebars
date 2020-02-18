@@ -1,0 +1,43 @@
+<div class="bg-primary">
+<div class="container">
+    <div class="row py-2">
+        <div class="col-sm-6 text-center text-md-left">
+            <!-- Social Media Bar -->
+            <h6 class="my-2 text-white">Follow Us on Social Media!</h6>
+        </div>
+        <div class="col-sm-6 text-center text-md-right">
+            <ul class="list-unstyled list-inline my-2">
+                {{#each socialMedia}}
+                <li class="list-inline-item px-2"><a href="{{url}}" alt ="{{alt}}"><i class="fa fa-lg fa-{{name}}"></i></a></li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</div>
+</div>
+<!-- Bottom Footer Section -->
+<div class="container text-center text-md-left">
+<div class="row">
+    <div class="col-md-4">
+        <h6 class="font-weight-bold text-center text-md-left mt-3">{{info.heading}}</h6>
+        <hr class="bg-primary mb-4 mt-2">
+        <p class="text-center text-md-left">{{info.text}}</p>
+    </div>
+    <div class="col-md-4">
+        <h6 class="font-weight-bold text-center text-md-left mt-3">{{siteNav.heading}}</h6>
+        <hr class="bg-primary mb-4 mt-2">
+        <ul class="list-unstyled text-center text-md-left">
+            {{#each siteNav.path}}
+            <li class="mb-3"><a href={{path}}>{{name}}</a></li>
+            {{/each}}
+        </ul>
+    </div>
+    <div class="col-md-4">
+        <h6 class="font-weight-bold text-center text-md-left mt-3">Find Harriman</h6>
+        <hr class="bg-primary mb-4 mt-2">
+        <p class="text-center text-md-left">{{contact.address}}</p>
+        <p class="text-center text-md-left">{{contact.email}}</p>
+        <p class="text-center text-md-left">{{contact.phone}}</p>
+    </div>
+</div>
+</div>
