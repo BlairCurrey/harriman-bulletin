@@ -55,37 +55,14 @@ var weatherArticle = {
 
 $(document).ready(function () {
 
-//------------------------ 
-// Weather Record Template
-//------------------------ 
+    //-----------------
+    // Fill Templates
+    //----------------- 
 
-    //save weather record html and register as partial 
-    var weatherTemplate = $("#weather-records-template").html()
-    Handlebars.registerPartial("weatherRecords", weatherTemplate);
+    //Article
+    $("#weather-article-container").append(Handlebars.templates['article'](weatherArticle))
 
-    //Compile the weather template data into a function
-    var weatherTemplateCompiled = Handlebars.compile(weatherTemplate);
+    //Data Table
+    $(".weather-records-container").append(Handlebars.templates['weather-records'](weatherData))
 
-    //Pass weatherData object to template
-    var weatherHtml = weatherTemplateCompiled(weatherData);
-
-    //Append filled in template to elements with the "weather-records-container class
-    $(".weather-records-container").append(weatherHtml);
-
-//-----------------
-// Article Template
-//----------------- 
-
-    //save article html and register as partial 
-    var articleTemplate = $("#article-template").html()
-    Handlebars.registerPartial("article", articleTemplate);
-
-    //Compile the template into a function
-    var articleTemplateCompiled = Handlebars.compile(articleTemplate);
-
-    //Pass weather article object to template
-    var weatherArticleHtml = articleTemplateCompiled(weatherArticle);
-
-    //Append filled in template to element with the "weather-article-container" id
-    $("#weather-article-container").append(weatherArticleHtml);
 });

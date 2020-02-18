@@ -112,25 +112,21 @@ var footer = {
 }
 
 $(document).ready(function () {
-    
-//------------
-//Nav Template
-//------------
-    var navTemplate = $("#navbar-template").html();
-    var compiledNavTemplate = Handlebars.compile(navTemplate);
-    $(".navbar-container").html(compiledNavTemplate(nav))
 
-    
-//---------------
-//Footer Template
-//---------------
-    var footerTemplate = $("#footer-template").html();
-    var compiledFooterTemplate = Handlebars.compile(footerTemplate);
-    $(".footer-container").html(compiledFooterTemplate(footer))
+    //-----------------
+    // Fill Templates
+    //-----------------
+
+    //Nav
+    $(".navbar-container").append(Handlebars.templates['nav'](nav))
+
+    //Footer
+    $(".footer-container").append(Handlebars.templates['footer'](footer))
     
 //detect current locations and set corresponding nav bar link to active
 //doesn't work with conditions and dropdown elements
 //alternative method that might fix? https://stackoverflow.com/questions/17050253/set-navigation-menu-item-active-in-handlebars-partial
+    
     var url = window.location;
 
     $('ul.navbar-nav a[href="'+ url +'"]').parent().addClass('active');

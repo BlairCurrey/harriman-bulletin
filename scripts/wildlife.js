@@ -21,16 +21,10 @@ $(document).ready(function () {
 // Article Template
 //----------------- 
 
-    //save article html and register as partial 
-    var articleTemplate = $("#article-template").html()
-    Handlebars.registerPartial("article", articleTemplate);
+    //-----------------
+    // Fill Templates
+    //----------------- 
 
-    //Compile the template into a function
-    var articleTemplateCompiled = Handlebars.compile(articleTemplate);
-
-    //Pass wildlife article object to template
-    var wildlifeArticleHtml = articleTemplateCompiled(wildlifeArticle);
-
-    //Append filled in template to element with the "wildlife-article-container" id
-    $("#wildlife-article-container").append(wildlifeArticleHtml);
+    //Article
+    $("#wildlife-article-container").append(Handlebars.templates['article'](wildlifeArticle))
 });

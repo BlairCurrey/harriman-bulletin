@@ -68,7 +68,11 @@ function playGifOnHover(card){
 }
 
 $(document).ready(function(){
-    var landmarkTemplate = $("#landmark-template").html();
-    var compiledLandmarkTemplate = Handlebars.compile(landmarkTemplate);
-    $(".landmark-container").html(compiledLandmarkTemplate(landmarks[0]))
+
+    //-----------------
+    // Fill Templates
+    //-----------------
+
+    //Nav
+    $(".landmark-container").append(Handlebars.templates['landmark'](landmarks[0]))
 });

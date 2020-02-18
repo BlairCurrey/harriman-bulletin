@@ -15,42 +15,13 @@ var terrainArticle = {
     ]
 }
 
-var favorites = {
-    
-    "fruit": "mango",
-    "sport": "golf",
-    "music": "Rock"
-
-}
-
-//Save favorites template and register as partial
-var favPartHTML = $("#favorites-partial").html();
-Handlebars.registerPartial("favoritesPartial", favPartHTML);
-
 $(document).ready(function () {
 
-//-----------------
-// Article Template
-//----------------- 
-
-    //save article html and register as partial 
-    var articleTemplate = $("#article-template").html()
-    Handlebars.registerPartial("article", articleTemplate);
-
-    //Compile the template into a function
-    var articleTemplateCompiled = Handlebars.compile(articleTemplate);
-
-    //Pass wildlife article object to template
-    var terrainArticleHtml = articleTemplateCompiled(terrainArticle);
-
-    //Append filled in template to element with the "wildlife-article-container" id
-    $("#terrain-article-container").append(terrainArticleHtml);
-
     //-----------------
-    //Favorite Template
-    //-----------------
-    var compiledFavoritesTemplate = Handlebars.compile($('#favorites-template').html());
-    var favoritesHTML = compiledFavoritesTemplate(favorites)
-    $(".favorites-container").append(favoritesHTML);
+    // Fill Templates
+    //----------------- 
+
+    //Article
+    $("#terrain-article-container").append(Handlebars.templates['article'](terrainArticle))
 
 });
