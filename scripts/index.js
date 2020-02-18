@@ -73,6 +73,6 @@ $(document).ready(function(){
     // Fill Templates
     //-----------------
 
-    //Nav
+    //landmark
     $(".landmark-container").append(Handlebars.templates['landmark'](landmarks[0]))
 });
