@@ -9,15 +9,10 @@
 		<meta name="author" content="Blair Currey">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="keywords" content="harriman, park, outdoors, weather, reports, hiking, wildlife">
-		
 		<!-- Add css, bootstrap, and fontAwesome stylesheets -->
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
 		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
-		<!-- Call handlebars runtime -->
-		<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.runtime.js"></script>
-
 	</head>
 
 	<body>
@@ -40,7 +35,7 @@
 					<div class="col-lg-6 align-self-center">
 						<h1>Spring 2020</h1>
 						<h6>Overview of Past Month's Reports:</h6>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+						<p>The unseasonably warm and wet winter look to continue into spring. The animals are waking up - including BEARS - and plants are starting to spring back.</p>
 					</div>
 					<div class="col-lg-6 align-self-center">
 						<img src="assets/tree-icon.svg" class="mx-auto d-block" alt="tree icon">
@@ -52,25 +47,8 @@
 			<!-- Card Section -->
 			<main class="container" role="main">
 				<!-- Featured Landmark Section -->
-				<div class="card  shadow landmark-container">
-					<!-- Handlebar Landmark Template Start -->
-					<!-- <script id="landmark-template" type="text/x-handlebars-template"> -->
-						<!-- <h5 class="card-header">Featured Landmark</h5>
-						<div>
-							<div class="row no-gutters">
-								<div class="col-md-6 p-3">
-									<h5 class="card-title">{{name}}</h5>
-									<p class="card-text"><small class="text-muted">Coordinates: {{coordinates}}</small></p>
-									<p class="card-text">{{description}}</p>
-									<a href="#" class="btn btn-primary">{{buttonText}}</a>
-								</div>
-								<div class="col-md-6 p-0">
-									<img src="{{imgPath}}" class="img-fluid float-right img-landmark" alt="a picture of the bradley mine from the inside looking out">
-								</div>
-							</div>
-						</div> -->
-					<!-- Handlebar Landmark Template End -->
-					<!-- </script> -->
+				<!-- Adapted from https://getbootstrap.com/docs/4.3/components/card/ -->
+				<div id="landmark" class="card  shadow landmark-container">
 				</div>
 
 				<div>
@@ -83,9 +61,9 @@
 								<div class="card shadow" id="weather-card"><a class="card-link" href="weather.html">
 									<div class="card-body text-center">
 										<h5 class="card-title">Weather</h5>
-										<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content</p>
+										<p class="card-text">See what the weather has been like in the region and how that is impact the park</p>
 									</div>
-									<img src="assets/weather-static.jpg" class="card-img-bottom" alt="weather icon">
+									<img src="assets/weather-static.jpg" class="card-img-bottom" alt="sun and clouds">
 								</a></div>
 							</div>
 							<!-- Terrain Card -->
@@ -93,9 +71,9 @@
 								<div class="card shadow" id="terrain-card"><a class="card-link" href="terrain.html">
 									<div class="card-body text-center">
 										<h5 class="card-title">Terrain</h5>
-										<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content</p>
+										<p class="card-text">See what's happening with the land and how that will impact your next trip</p>
 									</div>
-									<img src="assets/terrain-static.jpg" class="card-img-bottom" alt="terrain icon">
+									<img src="assets/terrain-static.jpg" class="card-img-bottom" alt="cartoon landscape">
 								</a></div>
 							</div>
 							<!-- Wildlife Card -->
@@ -103,9 +81,9 @@
 								<div class="card shadow" id="wildlife-card"><a class="card-link" href="wildlife.html">
 									<div class="card-body text-center">
 										<h5 class="card-title">Wildlife</h5>
-										<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content</p>
+										<p class="card-text">See what's going on with the wildlife of Harriman park and what to watch out for</p>
 									</div>
-									<img src="assets/wildlife-static.jpg" class="card-img-bottom" alt="wildlife icon">
+									<img src="assets/wildlife-static.jpg" class="card-img-bottom" alt="cartoon deer">
 								</a></div>
 							</div>
 						</div>
@@ -131,7 +109,6 @@
 	<script src="scripts/script.js"></script>
 
 	<!-- Add precompiled handlebars templates -->
-	<script src="/templates/article.compiled.js"></script>
 	<script src="/templates/landmark.compiled.js"></script>
 	<script src="/templates/nav.compiled.js"></script>
 	<script src="/templates/footer.compiled.js"></script>

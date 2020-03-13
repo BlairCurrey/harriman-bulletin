@@ -8,20 +8,15 @@
 		<meta name="description" content="Information on the State of Harriman Park in New York">
 		<meta name="author" content="Blair Currey">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="keywords" content="harriman, park, outdoors, weather, reports, hiking, wildlife">
-		
+		<meta name="keywords" content="harriman, park, outdoors, weather, reports, hiking, wildlife">		
 		<!-- Add css, bootstrap, and fontAwesome stylesheets -->
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
 		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-		
-		<!-- Call handlebars runtime -->
-		<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.runtime.js"></script>
-
 	</head>
 
   <body>
-    
+	
     <!--Header and Navigation-->
 	<!-- Navbar template with nav data inserted here -->
 	<nav class="navbar navbar-container navbar-expand-md fixed-top navbar-dark bg-dark shadow-lg"></nav>
@@ -34,9 +29,51 @@
 	</ol>
 	</nav>
 
-
+	<!-- Main about section -->
 	<section>
-		
+		<main class="container" role="main">
+			<div id="about-article-container">
+				<h1 class="text-center">About</h1>
+				<br>
+				<!-- About Us -->
+				<h3>Us</h3>
+				<p>We are collection of individuals from all walks of life that share a passion for the natural amenities Harriman State Park offers. 
+					We are locatted in Connecticut, New Jersey, New York, and Pennsylvania. 
+					We bring years of expertise hiking, camping, fishing, boating, biking and cross country skiing at the park. 
+					We are here to share our experience, appreciation, and knowledge.</p>
+				<hr>
+				<!-- About the Site -->
+				<h3>The Site</h3>
+				<p>This is a seasonal bulletin about the conditions of Harriman State Park. 
+					The scope of this bulletin is broken down into 3 main topics: Weather, Terrain, and Wildlife.
+					In these reports, we will communicate developments over the past season and forecasts for the next, as well as our personal experiences in the park.
+					We release an update every season. The scope of this bulletin is broken down into 3 main topics: Weather, Terrain, and Wildlife</p>
+				<h5>Release Schedule:</h5>
+				<ul>
+					<li>September <b>(Fall)</b></li>
+					<li>December <b>(Winter)</b></li>
+					<li>March <b>(Spring)</b></li>
+					<li>June <b>(Summer)</b></li>
+				</ul>
+				<hr>
+				<!-- About the Park -->
+				<h3>The Park</h3>
+				<p>Harriman is a 47,527 acre New York state park. 
+					It is New Yorks 2nd largest state park and is only 30 miles north of New York City. 
+					It boasts 200 miles of hiking trails, 31 lakes, two beaches, abundant wildlife, scenic drives, multiple camping options, and lots of history.
+					The land was donated by the Harriman estate and the State of New York has encorporated additional parcels over the years.
+					As a result, you can find ruinous developments (such as housing foundations and abandoned mines) buried in the woods. 
+					See which of these curiousity's we are featuring this month in our <a href="index.html#landmark">featured landmark</a>
+					Harriman State Park is ripe for adventure.
+				</p>
+				<!-- Directions/Map -->
+				<h5>Ready to start your adventure?</h5>
+				<p>Harriman is accessible from New York City via the Port Jervis line, stopping at Sloatsburg</p>
+				<div class="embed-responsive embed-responsive-16by9">
+					<iframe title = "Harriman State Park in Google Maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d192221.78556580472!2d-74.26857734770061!3d41.168015292491056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2d024ccf7ae9f%3A0xec8d25051a0d93dc!2sHarriman%20State%20Park!5e0!3m2!1sen!2sus!4v1583782187881!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+				</div>
+			</div>
+		</main>
 	</section>
 
 	<!-- Footer Section -->
@@ -51,7 +88,7 @@
 	<!-- Call Handlebars -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.js"></script>
 	
-	<!-- Add script to animate card image on hover -->
+	<!-- Add javascript -->
 	<script src="scripts/script.js"></script>
 	
 	<!-- Add precompiled handlebars templates -->

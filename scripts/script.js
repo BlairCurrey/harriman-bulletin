@@ -1,3 +1,4 @@
+//feeds nav template
 var nav = {
     
     "title": "The Harriman Bulletin",
@@ -44,6 +45,7 @@ var nav = {
     ]
 }
 
+//feeds footer template
 var footer = {
     
     "socialMedia": [
@@ -69,7 +71,7 @@ var footer = {
     "info":
         {
             "heading": "Explore Harriman",
-            "text": "Blah blah blah this is a description of the group. Extra words to make this blurb longer!"
+            "text": "The Harriman Bulletin is a seasonal newsletter concerning recent conditions and news about Harriman State park. The Bulletin is produced by a few enthusiasts of the park who want to share their passion."
         },
 
     "siteNav":
@@ -105,8 +107,8 @@ var footer = {
     
     "contact":
         {
-            "address": "Some Address",
-            "email": "someemail@gmail.com",
+            "address": "800 Kanawauke Rd, Southfields, NY 10975",
+            "email": "askus@harrimanbulletin.com",
             "phone": "(555)-555-5555"
         },
 }
@@ -124,13 +126,17 @@ $(document).ready(function () {
     $(".footer-container").append(Handlebars.templates['footer'](footer))
     
 //detect current locations and set corresponding nav bar link to active
-//doesn't work with conditions and dropdown elements
-//alternative method that might fix? https://stackoverflow.com/questions/17050253/set-navigation-menu-item-active-in-handlebars-partial
-    
+//adapted from https://css-tricks.com/snippets/jquery/add-active-navigation-class-based-on-url/
+//and extended to apply to reports while subitems are selected
     var url = window.location;
 
     $('ul.navbar-nav a[href="'+ url +'"]').parent().addClass('active');
+    //adds active class to nav item when on the corresponding url
     $('ul.navbar-nav a').filter(function() {
             return this.href == url;
     }).parent().addClass('active');
+    //adds active class to report when any of the reports are active
+    $('ul.navbar-nav a').filter(function() {
+        return this.href == url;
+    }).parent().parent().addClass('active');
 });

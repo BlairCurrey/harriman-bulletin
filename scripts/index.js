@@ -17,22 +17,21 @@ var cards = [
     }
 ]
 
+//feeds landmark template
 var landmarks = [
     {
         "name": "Bradley Mine",
-        "coordinates": "41.277044, -74.100116",
+        "coordinates": "41.277044,-74.100116",
         "description": "The Bradley Mine is an iron mine that was operated in the 19th century by the Parrot brothers until 1874. This is Harriman's largest mine.",
-        "buttonText": "CALL TO ACTION",
-        // "buttonLink":
+        "buttonText": "Find on Google Maps",
         "imgPath": "assets/bradley-mine.jpg",
         "imgAltTxt": "a picture of the bradley mine from the inside looking out"
     },
     {
         "name": "Ship Rock",
-        "coordinates": "41.249414, -74.127447",
+        "coordinates": "41.249414,-74.127447",
         "description": "It's a big rock",
-        "buttonText": "CALL TO ACTION",
-        // "buttonLink":
+        "buttonText": "Find on Google Maps",
         "imgPath": "assets/ship-rock.jpg",
         "imgAltTxt": "a picture of the landmark called 'ship rock,' which is a large rock that juts into the trail"
     }

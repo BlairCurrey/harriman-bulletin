@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Blair Currey's Report</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Information on the State of Harriman Park in New York">
+    <meta name="author" content="Blair Currey">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Final, Report, Web Development, Coursera, Goldsmith's, University of London">
+
+    <!-- Add css -->
+	<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+</head>
+
+<body id="report-body">
+    <header id="report-header">
+        <h1 class>Report: Large Coursework</h1>
+        <h1>Blair Currey</h1>
+    </header>
+    <!-- Intro -->
+    <div id ="intro-prompt" class ="prompt">
+        <h3>Introduction</h3>
+        <p>What is the essential story being told by your site and what type of structure did you choose to implement. </p>
+    </div>
+    <div id ="intro-response" class ="response">
+        <p>
+            The essential story I'm telling is what is happening in Harriman State Park. 
+            The purpose of my website is to create content (news, pictures, videos, data)
+            which connects people to Harriman State Park. The park is the closest natural oasis 
+            to New York City and is a very popular destination for outdoors enthusiasts who 
+            want to escape the city. I enjoy reading about people's knowledge and experiences 
+            in the park, but there is not much of this content online, nor anywhere that 
+            is particularly designed to deliver it. This newsletter serves to address this demand
+            that I anticipate exists beyond myself given the park's high attendance.
+        </p>
+        <p>
+            The newsletter is only seasonally updated because the topic by its nature is fairly slow
+            to change. The structure of my website is like an online magazine. The home page  is like 
+            the cover which introduces users to the site and features a preview of the contents (the report
+            cards) as well as an intriguing feature (see: featured landmark) each edition. From here visitors
+            can jump off into the different reports: weather, terrain, and wildlife. Each section briefs the
+            reader on the state of these aspects, new developments, and long-term trends, as well as serving 
+            as a place to publish interesting videos and pictures from the park. As an example of such media, 
+            I included a video of one of many young Eastern Newts I encountered on a recent hike. Finally, I 
+            included an "About" section to give the reader more information about the site, the theoretical 
+            group that publishes it, and the park. In addition to the reports, there are more direct calls 
+            for the reader to connect with the park. These include the button on the featured landmark section
+            which takes the user to the landmark's coordinates in google maps and the directions to, and map of, 
+            Harriman state park in about.html. Through these calls to explore the park, as well as the reports, 
+            I think my structure achieves the goal of connecting people to Harriman State Park.
+        </p>
+    </div>
+    <!-- Inspiration -->
+    <div id ="inspiration-prompt" class ="prompt">
+        <h3>State 3 things that have inspired you when creating your website.</h3>
+        <p>These could include guest speakers, other websites, artists, developers etc.</p>
+    </div>
+    <div id ="inspiration-response" class ="response">
+        <ol>
+            <li><a href="https://www.nynjtc.org/maps/harrimanbear-mountain-trails-map-set">Mountain Trail Map by New York-New Jersey Trail Conference</a></li>
+            <p>
+                I have a trail map of the park which has the interesting feature of listing 
+                different points of interest. These things include old mines, interesting rock
+                formations, or scenic views. I like to scan for these features and then make a
+                point to discover them. I wanted to translate that experience to the newsletter 
+                so I created the featured landmark section which displays a new notable location 
+                every edition. This hopefully compels the reader to explore the park.
+            </p>
+            <li><a href="https://bwca.com/index.cfm?fuseaction=forum.conference&confid=1">Boundary Waters Canoe Area Message Board</a></li>
+            <p>
+                The Boundary Waters Canoe Area is vast wilderness in Northern Minnesota. It is
+                a popular destination for many outdoor enthusiasts and has a very active message
+                board. The message board influenced the purpose of this site. I have used the BWCA
+                forum to get seasonal information (water levels, bear activity, etc.) while planning
+                trips. They also have a section for trip reports. This is the sort of information I
+                want to make available to those interested in visiting or even just reading about
+                Harriman.
+            </p>
+            <li>Modern Web Dev Motifs</a></li>
+            <p>
+                I was largely happy with my midterm project but I was not satisfied with one aspect: the
+                visual aesthetic. I wanted to draw inspiration from more modern web design motifs that
+                I have noticed and appreciated as a user, some of which are exemplified in this article, 
+                <a href="https://thenextweb.com/dd/2015/06/09/7-pillars-of-minimalist-web-design/">7 Pillars of Minimalist Web Design</a>. 
+                These include using lots of negative space, predominantly black
+                and white color scheme decorated with small amounts of bright color, and plain sans-serif 
+                fonts. The cartoony media is much simpler and less detailed than pictures which also supports
+                this design pattern.
+            </p>
+            <li>My interest in the outdoors</li>
+            <p> 
+                More than anything, I was inspired to make this newsletter by my interest in the outdoors. Exploring
+                the wilderness by nature is not something done in large, organized groups. I think this is one reason why
+                there isn't much of a community or meeting place for people that enjoy Harriman park (despite it being
+                very close to the United State's largest urban center and having very high attendance). Although the park
+                is so close to myself and so many other people, responsibilities keep me from visiting and exploring as
+                often as I'd enjoy. So, my desire to have some connection to the park and knowledge of the natural undulations
+                while at home is probably the largest influence.
+            </p>
+        </ol>
+    </div>
+    <!-- Accessibility -->
+    <div id ="accessible-prompt" class ="prompt">
+        <h3>State 3 ways in which your site is accessible.</h3>
+    </div>
+    <div id ="accessible-response" class ="response">
+        <ol>
+            <li>Carefully defined alt text for all images and titles for iframes</li>
+            <p>
+                The alt text for images and titles for iframes elements give a clear, concise indication
+                of the media for those using screen readers. Some of my alt text is not static, but inside
+                of my handlebars templates. I made sure all of these dynamically defined pictures also had 
+                alt text that matches them instead of having something generic that covers all of them. In
+                these cases, the alt text is defined along with the image path in order to render the
+                template. This meets <a href="https://www.w3.org/WAI/WCAG21/quickref/#non-text-content">
+                criteria 1.1.1 of Web Content Accessibility Guidelines.</a>
+            </p>
+            <li>Link text carefully defined</li>
+            <p>
+                I wanted to make sure my links supported cases where the user is using a screen reader to generate a list of links
+                to navigate the site. As a result, all of my link text is both concise and descriptive. When a user generates a list
+                of links they will know what each link is by the link text and they will be convenient to navigate by.
+                This meets <a href="https://www.w3.org/WAI/WCAG21/quickref/#link-purpose-link-only">
+                criteria 2.4.9 of Web Content Accessibility Guidelines.</a>
+            </p>
+            <li>Web Pages are titled by topic</li>
+            <p>
+                This meets <a href="https://www.w3.org/WAI/WCAG21/quickref/#page-titled">
+                criteria 2.4.2 of Web Content Accessibility Guidelines.</a>
+            </p>
+            <li>Communicate state of navbar dropdown</li>
+            <p>
+                Used aria property to ensure accessbility of drop down and items that normally rely on visual cues.
+                This meets <a href="https://www.w3.org/WAI/WCAG21/quickref/#name-role-value">
+                criteria 4.1.2 of Web Content Accessibility Guidelines.</a>
+            </p>
+            <li>Appropriate use of tables.</li>
+            <p>
+                Ensured table was accessible by clearly defining header cells with <code>&ltth&gt</code> and data cells with <code>&lttd&gt</code>. 
+                Additionally, tables were not misused for making the layout of the website. This is in accordance with
+                <a href="https://www.w3.org/WAI/tutorials/tables/tips/">the Web Content Accessibility Guidelines tutorials on tables.</a>
+            </p>
+            <li>Appropriate use of roles. </li>
+            <p>
+                Initially added <code>role="alert"</code> to the bear warning in wildlife.html not realizing that it would mislead
+                users using assistive technology. I included it because I was using the built-in bootstrap alert styling so I thought 
+                the alert role would also be appropriate. While the styling is appropriate, I was reviewing the accessibility of my 
+                site and realized that this role falsely suggests there is an urgent matter regarding the use of the website. While 
+                bear sightings are urgent for park visitors, they are not for website viewers. This realization caused me to re-examine
+                my use of roles in general and I found other opportunities for improvement such as adding the button role to the 
+                <code>&lta&gt</code> element in the featured landmark handlebars template. This is in accordance with
+                <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles">the MDN Web Docs article on roles.</a>
+            </p>
+        </ol>
+        <p>
+            Additionally, the page is readable due to the very high contrast ratio of black text on a white background and the site
+            layout scales well to desktop, tablet, and mobile.
+        </p>
+    </div>
+    <!-- What I Learned/Taught Myself -->
+    <div id ="learned-prompt" class ="prompt">
+        <h3>State 3 things you had to learn/find out by yourself when creating your site, and describe how you did that</h3>
+        <p> (i.e. what searches you did, any new tools/techniques you learned, any changes/adaptations you made to a particular resource to make it work with your site).</p>
+    </div>
+    <div id ="learned-response" class ="response">
+        <ol>
+            <li>Handlebars</li>
+            <p>
+                After learning about handlebars in class I realized that it could empower me to reuse code and take the details of
+                the content out of HTML. I began by rewatching the handlebars lectures on coursera but realized they did not
+                answer all my questions about handlebars. Namely how do I use partials and do I need them? Should I pre-compile my templates?
+                How do I separate the javascript from the html document? I referenced the handlebars documentation<a href="#c1"><sup>1</sup></a>, 
+                a blog post <a href="#c2"><sup>2</sup></a>, and a stack overflow post<a href="#c3"><sup>3</sup></a>, to learn how to pre-compile templates, to determine that I didn't 
+                need to use partials for my use-case, and how to use simple logic and looping to dynamically render the html depending on what is in the data structure (display picture if present, display each paragraph instead of a set number, etc).
+                To implement the actual precompilation and update my code, I followed the steps outlined in another Stackoverflow post refactored my code similarly.<a href="#c4"><sup>4</sup></a>
+            </p>
+            <li>Jquery</li>
+            <p>
+                From my understanding, jquery is the most common method for DOM manipulation so I wanted learn how to use it. 
+                I utlized the w3schools<a href="#c5"><sup>5</sup></a> and the jQuery documentation<a href="#c6"><sup>6</sup></a> to learn how to select elements by element type, id and class, 
+                how to append html into an element, filter list items, trigger events, bind methods on mouse hover, identify parent elements, and add classes.
+                I found jQuery fairly easy to work with. The jQuery selectors are essentially the same as CSS which made that portion of referencing the DOM easy.
+                The harder part was finding the names of the functions that performed what I wanted to do. However after googling for people trying to do similar things,
+                I could usually find the relevant function fairly quickly and the documentation is very thorough which simplified implementing them.
+            </p>
+            <li>Bootstrap</li>
+            <p>
+                I had never used a framework before and decided I would try one for this project. I picked bootstrap because it was mentioned in class,
+                it strongly emphasizes responsiveness and mobile sizing, and the style appeared to be easily adaptable to meet my goal of a modern,
+                minimalist style.
+            </p>
+            <p>
+                More specifically, the main thing I needed to learn was how to manipulate the layout and how to leverage and tweak the built-in style of
+                bootstrap. To this end, I followed the w3 tutorials<a href="#c7"><sup>7</sup></a> for bootstrap and referenced the bootstrap documentation<a href="#c8"><sup>8</sup></a>. 
+                This enabled me to implement most of the my website, but I needed to adapt one of the card templates from the bootstrap website
+                for the featured landmark portion of the index.html page <a href="#c9"><sup>9</sup></a>. I based my section off the template with 
+                considerable modifications. First, I split the body of the card and added a picture to the side. I also removed the "card-body" class
+                and wrapped the split body into a new div with different classes ("row", "no-gutters") which gave me the correct spacing. The source I
+                adapted this code from is also included in the html comments.
+            </p>
+            <li>Setting Nav Menu to Active page</li>
+            <p>
+                I wanted to highlight the nav item corresponding to the current page. I knew I could use the active tag to access the bootstrap
+                styling but wanted to do better than hardcoding it manually on each page. Additionally, hard-coding it would not be an option
+                when I later moved the navbar to a template. I referenced a post on the subject from CSS tricks <a href="#c10"><sup>10</sup></a> but
+                improved it so that it would also work with relative and absolute hrefs, as well as highlight the parent element of the dropdown
+                menu. The source code this was adapted from is included in the html comments.
+        </ol>
+    </div>
+    <!-- What Worked Well -->
+    <div id ="worked-prompt" class ="prompt">
+        <h3>What aspect(s) of your work do you think worked well and why? </h3>
+    </div>
+    <div id ="worked-response" class ="response">
+        <p>
+            I think the handlebars templating worked well because it allowed me to easily reuse a lot of the same code.
+            I took advantage of this by using it for the navbar and footer on every page as well as the articles on the
+            weather, terrain, and wildlife pages. I was even able to set up the article template such that it would
+            work if you added additional paragraphs to the data object and regardless of whether or not their was a picture.
+            So while the template ensures uniformity, it also has enough flexibility to handle such differences between articles.
+            While this edition's wildlife report has an article and video, we might have news are or a data table that we want to 
+            include in the next edition. With templates, we can simply create a data object with the information we want inserted 
+            into the template and then inject the rendered template into the appropriate html element. In this way, we can modify 
+            the content of the reports according to what we want to communicate that edition without changing the base html structure.
+            Additionally, precompiling prevents this burden on the client and it doesn't require the increased size of the 
+            run-time version of the handlebars library.
+        </p>
+        <p>
+            Another thing that worked well was the decision to use bootstrap in terms of making the website responsive. Towards the end of
+            the project I noticed the map in the about page and the table in the weather page were not scaling on mobile. As a result, the
+            navigation links were pushed far off to the right. It broke the layout. Fixing this with boot strap was easy - all I need to
+            do was change the classes ("table-responsive", and "embed-responsive") of the parent elements and the problem was fixed.
+        </p>
+        <p>
+            Finally, I was pleased with the effect I created with the report cards. That is, when hovered over, the change from a static
+            picture to a gif. I think this helps make the website feel more responsive and keeps the user engaged.
+        </p>
+    </div>
+    <!-- Areas for Improvement -->
+    <div id ="improvement-prompt" class ="prompt">
+        <h3>What aspect(s) of your work could be improved, and how might you do things differently another time?</h3>
+    </div>
+    <div id ="improvement-response" class ="response">
+        <p>
+            One of the things that I could improve is to make the "subscribe" button functional. It currently brings up a form in a modal
+            but nothing happens when you click the subscribe button. In theory this could enter the email into a database which is referenced
+            every time a new edition is published to send out an email that notifies the recipient that the site is updated.
+        </p>
+        <p>
+            I could add a lot more entries for the "featured landmarks" section to choose from. Right now it is more of a proof of concept,
+            but the idea is that it could pull from a very large selection of curiosities in the park. 
+        </p>
+        <p>
+            I could add a feature for the current weather. The solutions I found in a prelimanary search were to add a pre-styled widget
+            from different weather sites but they neither fit thematically or really displayed the information that I wanted.
+        </p>
+    </div>
+    <!-- Resources Used -->
+    <div id ="resources-prompt" class ="prompt">
+        <h3>What resources were used when creating your work?</h3>
+        <p>You should list here any sources of information, libraries, plug-ins or other code that you used to create your site. You should also reference any code you've used by inserting comments at the start of the scripts. </p>
+    </div>
+    <div id ="resources-response" class ="response">
+        <h4>Citations for sources referenced in Report</h5>
+        <ul class="citations">
+            <li id="c1">
+                [1] Handlebarsjs.com, 'API Reference', 2019. [Online]. Available:
+                <a href="https://handlebarsjs.com/api-reference/">https://handlebarsjs.com/api-reference/</a>. [Accessed: 10- Feb- 2020].
+            </li>
+            <li id="c2">
+                [2] Javascriptissexy.com, 'Handlebars.js Tutorial: Learn Everything About Handlebars.js JavaScript Templating', 2013. [Online]. Available:
+                <a href="https://javascriptissexy.com/handlebars-js-tutorial-learn-everything-about-handlebars-js-javascript-templating/">https://javascriptissexy.com/handlebars-js-tutorial-learn-everything-about-handlebars-js-javascript-templating/</a> [Accessed: 10- Feb- 2020]. 
+            </li>
+            <li id="c3">
+                [3] Stackoverflow.com, 'Handlebars, loading external template files', 2014. [Online]. Available:
+                <a href="https://stackoverflow.com/questions/26643503/handlebars-loading-external-template-files">https://stackoverflow.com/questions/26643503/handlebars-loading-external-template-files</a> [Accessed: 12- Feb- 2020].
+            </li>
+            <li id="c4">
+                [4] Stackoverflow.com, 'Using pre-compiled templates with Handlebars.js (jQuery Mobile environment)', 2011. [Online]. Available:
+                <a href="https://stackoverflow.com/questions/8659787/using-pre-compiled-templates-with-handlebars-js-jquery-mobile-environment">https://stackoverflow.com/questions/8659787/using-pre-compiled-templates-with-handlebars-js-jquery-mobile-environment</a> [Accessed: 15- Feb- 2020].
+            </li>
+            <li id="c5">
+                [5] W3schools.com, 'jQuery Tutorial', 2020. [Online]. Available:
+                <a href="https://www.w3schools.com/jquery/">https://www.w3schools.com/jquery/</a> [Accessed: 12- Jan- 2020].
+            </li>
+            <li id="c6">
+                [6] API.Jquery.com, 'jQuery API', 2020. [Online]. Available:
+                <a href="https://api.jquery.com/">https://api.jquery.com/</a> [Accessed: 15- Jan- 2020].
+            </li>
+            <li id="c7">
+                [7] W3schools.com, 'Bootstrap Tutorial', 2020. [Online]. Available:
+                <a href="https://www.w3schools.com/bootstrap/">https://www.w3schools.com/bootstrap//</a> [Accessed: 04- Jan- 2020].
+            </li>
+            <li id="c8">
+                [8] getbootstrap.com, 'Documentation', 2020. [Online]. Available:
+                <a href="https://getbootstrap.com/docs/4.4/getting-started/introduction/">https://getbootstrap.com/docs/4.4/getting-started/introduction/</a> [Accessed: 04- Jan- 2020].
+            </li>
+            <li id="c9">
+                [9] getbootstrap.com, 'Cards', 2020. [Online]. Available:
+                <a href="https://getbootstrap.com/docs/4.3/components/card/">https://getbootstrap.com/docs/4.3/components/card/</a> [Accessed: 08- Jan- 2020].
+            </li>
+            <li id="c10">
+                [10] C. Coyier, 'Add Active Navigation Class Based on URL', 2012. [Online]. Available:
+                <a href="https://css-tricks.com/snippets/jquery/add-active-navigation-class-based-on-url/">https://css-tricks.com/snippets/jquery/add-active-navigation-class-based-on-url/</a> [Accessed: 10- Jan- 2020].
+            </li>
+        </ul>
+        <h4>Software</h5>
+            <ul class="citations">
+                <li id="c11">
+                    [11] Google Chrome. Available:
+                    <a href="https://www.google.com/chrome/">https://www.google.com/chrome/</a>
+                </li>
+                <li id="c12">
+                    [12] Microsoft Edge. Available:
+                    <a href="https://www.microsoft.com/en-us/edge">https://www.microsoft.com/en-us/edge</a>
+                </li>
+                <li id="c13">
+                    [13] Handlebars. Available:
+                    <a href="https://handlebarsjs.com">https://handlebarsjs.com</a>
+                </li>
+                <li id="c14">
+                    [14] jQuery. Available:
+                    <a href="https://jquery.com/">https://jquery.com/</a>
+                </li>
+                <li id="c14">
+                    [14] Bootstrap. Available:
+                    <a href="https://getbootstrap.com/">https://getbootstrap.com/</a>
+                </li>
+                <li id="c15">
+                    [15] Font Awesome. Available:
+                    <a href="https://fontawesome.com/">https://fontawesome.com/</a>
+                </li>
+                <li id="c16">
+                    [16] cdnjs. Available:
+                    <a href="https://cdnjs.com/">https://cdnjs.com/</a>
+                </li>
+                <li id="c17">
+                    [17] apps.diagrams. Available:
+                    <a href="https://app.diagrams.net/">https://app.diagrams.net/</a>
+                </li>
+                <li id="c18">
+                    [18] Bulk Resize Photos. Available:
+                    <a href=https://bulkresizephotos.com/en">https://bulkresizephotos.com/en</a>
+                </li>
+            </ul>
+        <h4>Media</h5>
+            <ul class="citations">
+                <li id="c19">
+                    [19] Weather GIF. Available:
+                    <a href="https://giphy.com/gifs/weather-PLJzdMVafDLTW">https://giphy.com/gifs/weather-PLJzdMVafDLTW</a>
+                </li>
+                <li id="c20">
+                    [20] Moonlighting GIF. Available:
+                    <a href="https://giphy.com/gifs/moonlighting-10QBLPa4UZzhcs">https://giphy.com/gifs/moonlighting-10QBLPa4UZzhcs</a>
+                </li>
+                <li id="c21">
+                    [21] Landmark Images From Google Maps. Available:
+                    <a href="https://goo.gl/maps/w5JLs8vprBqkefpy8">https://goo.gl/maps/w5JLs8vprBqkefpy8</a>
+                </li>
+                <li id="c22">
+                    [22] Tree SVG Icon. Available:
+                    <a href="https://www.flaticon.com/free-icon/forest_834357">https://www.flaticon.com/free-icon/forest_834357</a>
+                </li>
+    </div>
+    <!-- Appendices -->
+    <h2>Appendices</h2>
+    <div id ="sitemap-prompt" class ="prompt">
+        <h3>Site Map</h3>
+    </div>
+    <div id ="sitemap-response" class ="response">
+        <!-- <a href="planning/site-map.jpg">site-map.jpg</a> -->
+        <img id="site-map" src="planning/site-map.svg" alt="Site Map">
+    </div>
+    <div id ="sitemap-prompt" class ="prompt">
+        <h3>Wireframes</h3>
+    </div>
+    <div id ="sitemap-response" class ="response">
+        <h5>Widescreen</h5>
+        <ul>
+            <li><a href="planning/wireframes/index-wf-wide.jpg">index-wf-wide.jpg</a></li>
+            <li><a href="planning/wireframes/weather-wf-wide.jpg">weather-wf-wide.jpg</a></li>
+            <li><a href="planning/wireframes/terrain-wf-wide.jpg">terrain-wf-wide.jpg</a></li>
+            <li><a href="planning/wireframes/wildlife-wf-wide.jpg">wildlife-wf-wide.jpg</a></li>
+            <li><a href="planning/wireframes/about-wf-wide.jpg">about-wf-wide.jpg</a></li>
+        </ul>
+        <h5>Mobile</h5>
+        <ul>
+            <li><a href="planning/wireframes/index-wf-mobile.jpg">index-wf-mobile.jpg</a></li>
+            <li><a href="planning/wireframes/weather-wf-mobile.jpg">weather-wf-mobile.jpg</a></li>
+            <li><a href="planning/wireframes/terrain-wf-mobile.jpg">terrain-wf-mobile.jpg</a></li>
+            <li><a href="planning/wireframes/wildlife-wf-mobile.jpg">wildlife-wf-mobile.jpg</a></li>
+            <li><a href="planning/wireframes/about-wf-mobile.jpg">about-wf-mobile.jpg</a></li>
+        </ul>
+    </div>
+    <div id ="mockups-prompt" class ="prompt">
+        <h3>Mockups</h3>
+    </div>
+    <div id ="mockups-response" class ="response">
+        <h5>Desktop - 1920x1080</h5>
+        <p>Screenshot from Lenovo T480</p>
+        <ul>
+            <li><a href="planning/mockups/desktop-index.jpg">desktop-index.jpg</a></li>
+            <li><a href="planning/mockups/desktop-weather.jpg">desktop-weather.jpg</a></li>
+            <li><a href="planning/mockups/desktop-terrain.jpg">desktop-terrain.jpg</a></li>
+            <li><a href="planning/mockups/desktop-wildlife.jpg">desktop-wildlife.jpg</a></li>
+            <li><a href="planning/mockups/desktop-about.jpg">desktop-about.jpg</a></li>
+        </ul>
+        <h5>Tablet - 768x1024</h5>
+        <p>Emulated Ipad</p>
+        <ul>
+            <li><a href="planning/mockups/tablet-index.jpg">tablet-index.jpg</a></li>
+            <li><a href="planning/mockups/tablet-weather.jpg">tablet-weather.jpg</a></li>
+            <li><a href="planning/mockups/tablet-terrain.jpg">tablet-terrain.jpg</a></li>
+            <li><a href="planning/mockups/tablet-wildlife.jpg">tablet-wildlife.jpg</a></li>
+            <li><a href="planning/mockups/tablet-about.jpg">tablet-about.jpg</a></li>
+        </ul>
+        <h5>Desktop - 414x736</h5>
+        <p>Emulated Iphone 6/7/8 Plus</p>
+        <ul>
+            <li><a href="planning/mockups/mobile-index.jpg">mobile-index.jpg</a></li>
+            <li><a href="planning/mockups/mobile-weather.jpg">mobile-weather.jpg</a></li>
+            <li><a href="planning/mockups/mobile-terrain.jpg">mobile-terrain.jpg</a></li>
+            <li><a href="planning/mockups/mobile-wildlife.jpg">mobile-wildlife.jpg</a></li>
+            <li><a href="planning/mockups/mobile-about.jpg">mobile-about.jpg</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>

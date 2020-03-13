@@ -9,15 +9,10 @@
 		<meta name="author" content="Blair Currey">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="keywords" content="harriman, park, outdoors, weather, reports, hiking, wildlife">
-		
 		<!-- Add css, bootstrap, and fontAwesome stylesheets -->
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
 		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-		
-		<!-- Call handlebars runtime -->
-		<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.runtime.js"></script>
-
 	</head>
 
   <body>
@@ -26,7 +21,7 @@
 	<!-- Navbar template with nav data inserted here -->
 	<nav class="navbar navbar-container navbar-expand-md fixed-top navbar-dark bg-dark shadow-lg"></nav>
 
-		  <!-- Breadcrumb bar -->
+	<!-- Breadcrumb bar -->
 	<nav aria-label="breadcrumb">
 	<ol class="breadcrumb">
 		<li class="breadcrumb-item">Home</li>
@@ -43,7 +38,7 @@
 			<div id="weather-article-container"></div>
 
 			<!-- Article template with weather records data gets inserted here -->
-			<div class="mt-5 weather-records-container"></div>
+			<div class="mt-5 weather-records-container table-responsive"></div>
 
 		</main>			
 	</section>
@@ -60,7 +55,6 @@
 	<!-- Call Handlebars -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.js"></script>
 	
-
 	<!-- Add universal and page specific scripts-->
 	<script src="scripts/script.js"></script>
 	<script src="scripts/weather.js"></script>
